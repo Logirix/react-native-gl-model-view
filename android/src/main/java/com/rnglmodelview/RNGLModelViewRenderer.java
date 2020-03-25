@@ -68,8 +68,9 @@ public class RNGLModelViewRenderer implements GLTextureView.Renderer {
 
       light = new Light(world);
       light.enable();
-      light.setIntensity(51, 51, 51);
-      light.setPosition(SimpleVector.create(0, 0, 1));
+      light.setIntensity(255, 255, 255);
+      light.setPosition(SimpleVector.create(0, Integer.MAX_VALUE, 0));
+      light.setDiscardDistance(-1);
 
       // In jpct, the coordinate system is rotated 180 degrees around x compared to the OpenGL
       // coordinate system, which means that y faces towards the bottom and z faces away from the
